@@ -1,0 +1,21 @@
+name: SlotHotKeys
+main: luludev.com.slothotkeys.SlotHotKeysPlugin
+version: 1.0.0
+api-version: 1.21
+author: LULUDEV
+
+softdepend: ["PlaceholderAPI"]
+depend:
+  - MMOItems
+  - MMOCore
+  - MythicLib
+
+commands:
+  slothotkeys:
+    description: SlotHotKeys commands
+    usage: /slothotkeys reload
+    permission: slothotkeys.admin
+
+permissions:
+  slothotkeys.admin:
+    default: op

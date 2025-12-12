@@ -1,0 +1,85 @@
+settings:
+  auto-potion:
+    enabled: true
+    # ถ้าเลือดต่ำกว่าค่านี้ (0.5 = 50%) จะพยายามกินยา
+    health-threshold: 0.5
+    # เช็คทุกกี่ tick (20 = 1 วินาที)
+    check-interval-ticks: 10
+    # คูลดาวน์การกินยา หน่วย tick
+    cooldown-ticks: 60
+
+    # Placeholder จาก MMOCore (ผ่าน PlaceholderAPI)
+    # ถ้าค่าพวกนี้ parse ไม่ได้ จะ fallback ไปใช้ Bukkit health แทน
+    current-health-placeholder: "%mmocore_health%"
+    max-health-placeholder: "%mmocore_max_health%"
+
+  weapon-types:
+    - SWORD
+    - DAGGER
+    - HAMMER
+    - STAFF
+    - SPEAR
+
+  potion-types:
+    - BPOTION
+
+  restrict-hotbar-0-2: true
+
+  menu-slots:
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+
+menus:
+  # key = หมายเลข slot (0-based) ใน hotbar
+  "3":
+    material: PAPER
+    custom_model_data: 1001
+    name: "&aMain Menu"
+    lore:
+      - "&7Open main menu"
+      - "&7(Press &e4&7)"
+    command: "menu main %player%"
+
+  "4":
+    material: COMPASS
+    custom_model_data: 1002
+    name: "&bWarp Menu"
+    lore:
+      - "&7Open warp GUI"
+    command: "warp gui %player%"
+
+  "5":
+    material: NETHER_STAR
+    custom_model_data: 1003
+    name: "&dQuest Menu"
+    lore:
+      - "&7Open quest GUI"
+    command: "quest gui %player%"
+
+  "6":
+    material: BOOK
+    custom_model_data: 1004
+    name: "&eStatus"
+    lore:
+      - "&7Open character status"
+    command: "status %player%"
+
+  "7":
+    material: CHEST
+    custom_model_data: 1005
+    name: "&6Storage"
+    lore:
+      - "&7Open storage"
+    command: "storage %player%"
+
+  "8":
+    material: BARRIER
+    custom_model_data: 1006
+    name: "&cClose Menu"
+    lore:
+      - "&7Run close command"
+    command: "closemenu %player%"
